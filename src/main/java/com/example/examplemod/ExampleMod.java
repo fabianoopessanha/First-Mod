@@ -20,12 +20,13 @@ public class ExampleMod {
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public ExampleMod(IEventBus modEventBus, ModContainer modContainer) {
         ModItem.ITEM.register(modEventBus); //Registra o item no barramento de eventos
+        ModItem.BLOCK.register(modEventBus); //Registra a fila de blocos no barramento
         modEventBus.addListener(this::gatherData);
     }
 
     private void gatherData(GatherDataEvent event) {
         DataGenerator gen = event.getGenerator();
-        
+
     }
 
 }

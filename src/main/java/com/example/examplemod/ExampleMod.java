@@ -25,7 +25,7 @@ public class ExampleMod {
         modEventBus.addListener(this::gatherData);
     }
 
-    private void gatherData(GatherDataEvent event) {
+    private void gatherData(GatherDataEvent.Client event) {
         DataGenerator gen = event.getGenerator();
         PackOutput packOutput = gen.getPackOutput();
     }

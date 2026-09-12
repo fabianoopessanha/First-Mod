@@ -2,6 +2,7 @@ package com.example.examplemod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -26,7 +27,7 @@ public class ExampleMod {
 
     private void gatherData(GatherDataEvent event) {
         DataGenerator gen = event.getGenerator();
-
+        PackOutput packOutput = gen.getPackOutput();
     }
 
 }
